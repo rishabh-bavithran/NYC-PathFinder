@@ -77,14 +77,14 @@ class AStarNYC:
         return False
 
     def potential_neighbours(self, current_pos):
-        u = np.array([-1, 0])
-        d = np.array([1, 0])
-        l = np.array([0, -1])
-        r = np.array([0, 1])
+        up = np.array([-1, 0])
+        down = np.array([1, 0])
+        left = np.array([0, -1])
+        right = np.array([0, 1])
 
-        #ALL 8 SURROUNDING PIXELS S
-        potential_moves = [current_pos + u, current_pos + d, current_pos + l, current_pos + r, 
-                           current_pos + u+r, current_pos + u+l, current_pos + d+r, current_pos + d+l]
+        #ALL 8 SURROUNDING PIXELS
+        potential_moves = [current_pos + up, current_pos + down, current_pos + left, current_pos + right, 
+                           current_pos + up+right, current_pos + up+left, current_pos + down+right, current_pos + down+left]
         return potential_moves
 
     def validate_neighbour(self, move):
