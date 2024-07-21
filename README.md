@@ -1,7 +1,8 @@
 # NYC Pathfinder
 
-## Description
+[NYC_Astar.webm](https://github.com/user-attachments/assets/03a73be7-1363-4b0c-827f-667633fce800)
 
+## Description
 NYC Pathfinder is a project that implements the A* search algorithm to find the shortest path between two points on a grid representation of New York City. The algorithm visualizes the search process and the resulting path using `matplotlib`.
 
 ## Features
