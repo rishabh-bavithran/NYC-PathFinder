@@ -13,6 +13,9 @@ NYC Pathfinder is a project that implements the A* search algorithm to find the 
 
 
 ## Dependencies 
+
 numpy=1.16.4 
+
 matploblib=3.1.0
+
 Conda Environment required if unexpected errors occur
