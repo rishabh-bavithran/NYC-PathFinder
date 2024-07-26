@@ -33,6 +33,7 @@ class AStarNYC:
         self.grid = grid
         self.explored_path = explored_path
         self.path_threshold = 0.2
+        self.path_pixel_depth = 1
 
     def get_neighbours(self):
         potential_moves = self.potential_neighbours(self.current_pos)
@@ -43,7 +44,7 @@ class AStarNYC:
         
         #STORING EACH NEIGHBOURS MOVES FROM START AND HEURISTIC FOR CHOOSING BEST NEIGHBOUR LATER
             if str(move) not in self.explored and str(move) not in self.not_explored: 
-                self.not_explored[str(move)] = self.current_pos_dist  + 1 + self.heuristic(move)
+                self.not_explored[str(move)] = self.current_pos_dist  + self.path_pixel_depth + self.heuristic(move)
         self.explored[str(self.current_pos)] = 0 
         return True
 
